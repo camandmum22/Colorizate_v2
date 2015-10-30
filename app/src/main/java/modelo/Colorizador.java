@@ -32,9 +32,31 @@ public class Colorizador
     // Metodos
     // --------------------------------------------------------------------------------------------
 
-    public Color calcularColorPromedio(Bitmap recorte)
+    public int calcularColorPromedio(Bitmap recorte)
     {
-        return null;
+        int sizeX = recorte.getWidth();
+        int sizeY = recorte.getHeight();
+        int colorPromedio = 0;
+        for(int x = 0; x < sizeX; x++)
+        {
+            for(int y = 0; y < sizeY; y++)
+            {
+
+                if(colorPromedio == 0)
+                {
+                    colorPromedio = recorte.getPixel(x,y);
+                }
+
+                else
+                {
+                    int colorActual = recorte.getPixel(x,y);
+                    colorPromedio += colorActual;
+                    colorPromedio = colorPromedio/2;
+                }
+            }
+        }
+
+        return colorPromedio;
     }
 
     public Bitmap sacarFragmento(Bitmap foto, int x1, int y1, int x2, int y2)
