@@ -51,7 +51,7 @@ public class Colorizador
                 {
                     int colorActual = recorte.getPixel(x,y);
                     colorPromedio += colorActual;
-                    colorPromedio = colorPromedio/2;
+                    colorPromedio = colorPromedio / 2;
                 }
             }
         }
