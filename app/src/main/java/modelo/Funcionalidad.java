@@ -32,7 +32,18 @@ public class Funcionalidad
 
     public double calcularPorcentajeIgualdad(Color color1, Color color2)
     {
-        return 0.0;
+        int r1 = color1.getRed();
+        int r2 = color2.getRed();
+
+        int g1 = color1.getGreen();
+        int g2 = color2.getGreen();
+
+        int b1 = color1.getBlue();
+        int b2 = color2.getBlue();
+
+        double d=sqrt((r2-r1)^2+(g2-g1)^2+(b2-b1)^2);
+        double p=d/sqrt((255)^2+(255)^2+(255)^2);
+        return p;
     }
 
     public double calcularPorcentajeAnalogo(Color color1, Color color2)
