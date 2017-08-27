@@ -3,6 +3,6 @@ Mobile application for Android, designed as a solution to assist people with Col
 
 ## Main Functionalities
 * Color Prediciton
-* Complemnet Color Recommendation
+* Complement Color Recommendation
 * Ripened/Spoiled Fruit Identification
 
